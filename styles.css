@@ -69,42 +69,93 @@ body {
 h1 {
     text-align: center;
     margin-top: 40px;
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #222;
 }
 
 /* Contenedor Flexbox */
 .container {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
     padding: 40px;
-    flex-wrap: wrap;
 }
 
-/* Cajas */
+/* Tarjetas */
 .box {
     background-color: white;
-    padding: 20px;
-    width: 280px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: flex-start;
 }
 
+/* Contenedor del texto */
+.box-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Logo */
+.box img {
+    width: 180px;
+    height: auto;
+}
+
+/* Título */
 .box h2 {
-    margin-top: 0;
-    color: #444;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
 }
 
+/* Párrafo */
 .box p {
-    color: #666;
+    font-family: "Xanh Mono", monospace;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+/* Enlace */
+.box a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tablet */
+@media (max-width: 900px) {
+    .box {
+        width: 90%;
     }
 >>>>>>> feat/html
+}
+
+/* Responsive móvil */
+@media (max-width: 600px) {
+    .box {
+        flex-direction: column;
+        width: 100%;
+        max-width: 380px;
+        text-align: center;
+    }
+
+    .box img {
+        margin: 0 auto;
+        width: 140px;
+    }
 }
