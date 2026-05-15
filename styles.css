@@ -18,7 +18,7 @@ h1 {
 /* Contenedor Flexbox */
 .container {
     display: flex;
-    flex-direction: column;   /* ← UNA TARJETA DEBAJO DE OTRA */
+    flex-direction: column;
     gap: 30px;
     align-items: center;
     padding: 40px;
@@ -28,28 +28,36 @@ h1 {
 .box {
     background-color: white;
     padding: 30px;
-    width: 700px;             /* ← MÁS ANCHO, COMO LA MAQUETA */
+    width: 700px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    display: flex;            /* ← LOGO IZQUIERDA + TEXTO DERECHA */
+    display: flex;
     flex-direction: row;
     gap: 25px;
     align-items: flex-start;
 }
 
+/* Contenedor del texto */
+.box-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* Logo */
 .box img {
-    width: 120px;             /* ← LOGO GRANDE */
+    width: 180px;
     height: auto;
 }
 
-/* Contenido de texto */
+/* Título */
 .box h2 {
     margin: 0;
     font-size: 1.8rem;
     color: #333;
 }
 
+/* Párrafo */
 .box p {
     color: #555;
     font-size: 1rem;
@@ -61,8 +69,8 @@ h1 {
 .box a {
     color: #1e88e5;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 1.05rem;
 }
 
 .box a:hover {
@@ -79,7 +87,7 @@ h1 {
 /* Responsive móvil */
 @media (max-width: 600px) {
     .box {
-        flex-direction: column;   /* ← LOGO ARRIBA, TEXTO ABAJO */
+        flex-direction: column;
         width: 100%;
         max-width: 380px;
         text-align: center;
@@ -87,6 +95,6 @@ h1 {
 
     .box img {
         margin: 0 auto;
-        width: 100px;
+        width: 140px;
     }
 }
