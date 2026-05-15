@@ -10,57 +10,59 @@ body {
 h1 {
     text-align: center;
     margin-top: 40px;
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #222;
 }
 
 /* Contenedor Flexbox */
 .container {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;   /* ← UNA TARJETA DEBAJO DE OTRA */
+    gap: 30px;
+    align-items: center;
     padding: 40px;
-    flex-wrap: wrap;
 }
 
 /* Tarjetas */
 .box {
     background-color: white;
-    padding: 20px;
-    width: 500px;                 /* ← Más ancho, como en la maqueta */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: flex;                /* ← Logo izquierda, texto derecha */
+    padding: 30px;
+    width: 700px;             /* ← MÁS ANCHO, COMO LA MAQUETA */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    display: flex;            /* ← LOGO IZQUIERDA + TEXTO DERECHA */
     flex-direction: row;
-    gap: 20px;
+    gap: 25px;
     align-items: flex-start;
-    transition: transform 0.2s ease;
 }
 
-.box:hover {
-    transform: translateY(-5px);
-}
-
+/* Logo */
 .box img {
-    width: 80px;                  /* ← Tamaño del logo */
+    width: 120px;             /* ← LOGO GRANDE */
     height: auto;
 }
 
+/* Contenido de texto */
 .box h2 {
     margin: 0;
-    color: #444;
+    font-size: 1.8rem;
+    color: #333;
 }
 
 .box p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
+/* Enlace */
 .box a {
     color: #1e88e5;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .box a:hover {
@@ -68,26 +70,23 @@ h1 {
 }
 
 /* Responsive tablet */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 900px) {
+    .box {
+        width: 90%;
     }
 }
 
 /* Responsive móvil */
 @media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-
     .box {
-        flex-direction: column;   /* ← Logo arriba, texto abajo */
+        flex-direction: column;   /* ← LOGO ARRIBA, TEXTO ABAJO */
         width: 100%;
-        max-width: 360px;
+        max-width: 380px;
+        text-align: center;
     }
 
     .box img {
         margin: 0 auto;
+        width: 100px;
     }
 }
