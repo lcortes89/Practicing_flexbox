@@ -23,13 +23,17 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* Cajas */
+/* Tarjetas */
 .box {
     background-color: white;
     padding: 20px;
-    width: 280px;
+    width: 320px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     transition: transform 0.2s ease;
 }
 
@@ -37,13 +41,30 @@ h1 {
     transform: translateY(-5px);
 }
 
+.box img {
+    width: 60px;
+    height: auto;
+}
+
 .box h2 {
-    margin-top: 0;
+    margin: 0;
     color: #444;
 }
 
 .box p {
     color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.box a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.box a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive tablet */
@@ -62,6 +83,6 @@ h1 {
 
     .box {
         width: 100%;
-        max-width: 350px;
+        max-width: 360px;
     }
 }
