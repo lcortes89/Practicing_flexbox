@@ -1,43 +1,60 @@
-# Exercise - HTML5 & CSS3 - Frontend - Reproduce using Flexbox
+# Exercise - HTML5 & CSS3 - Frontend - Reproduce using Grid
 
-## Instrucciones
+Repositorio creado para el aprendizaje y dominio de **CSS Grid Layout** mediante la reproducción exacta de una interfaz fluida y de colores adaptables.
 
-Reproduce la siguiente imagen utilizando **HTML** y **CSS**.  
-Utiliza como texto un **lorem ipsum**.
+---
 
-### Requisito
-- Usar flexbox.
-- Debes utilizar una fuente de [Google Fonts](https://fonts.google.com/).
-- Enlace a "Learn more about HTML" (https://lenguajehtml.com/html/)
-- Enlace a "Learn more about CSS" (https://lenguajecss.com/css/)
+# 📖 Descripción
 
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="./imgs/01-desktop-version.png" alt="Imagen desktop" style="max-width: 300px; max-height: 300px;">
-  <img src="./imgs/01-mobil-version.png" alt="Imagen móvil" style="max-width: 300px; max-height: 500px;">
-</div>
-# Practicing Flexbox - HTML5 & CSS3
+Este proyecto consiste en una página web estática desarrollada para reproducir con total fidelidad una rejilla de bloques de colores interactiva. 
 
-¡Bienvenido al proyecto de práctica de Flexbox! En este repositorio se presenta una interfaz responsiva compuesta por tarjetas informativas que detallan las características fundamentales de **HTML5** y **CSS3**, estructuradas de forma limpia y eficiente utilizando CSS Flexible Box Layout.
+El objetivo principal es diseñar y maquetar una experiencia visual moderna, responsive y accesible utilizando únicamente **HTML5** y **CSS3**, poniendo a prueba el control absoluto de las cuadrículas y sus comportamientos adaptativos.
 
-## 🚀 Demostración en Vivo
-Puedes ver el resultado del despliegue en el siguiente enlace público:
-👉 [Ver sitio en GitHub Pages](https://lcortes89.github.io/Practicing_flexbox/)
+---
 
-## 🛠️ Tecnologías Utilizadas
-* **HTML5:** Estructura semántica del documento.
-* **CSS3 (Flexbox):** Diseño modular, distribución de espacios y alineación de elementos.
-* **Google Fonts:** Integración de la tipografía moderna *Poppins*.
+# 🎨 Diseño Visual & Comportamiento Responsive
 
-## 📱 Características Responsivas
-El diseño ha sido desarrollado siguiendo estándares de adaptabilidad:
-* **Escritorio:** Las tarjetas se organizan en filas horizontales alineando el logo a la izquierda y el contenido textual a la derecha.
-* **Dispositivos Móviles (Media Queries):** Al reducirse la pantalla por debajo de los `600px`, los elementos se reordenan automáticamente en columnas verticales, centrando el contenido y optimizando la lectura en smartphones.
+La cuadrícula muta de forma dinámica mediante Media Queries según el ancho de la pantalla para garantizar una experiencia fluida:
 
-## 📁 Estructura del Proyecto
-```text
-├── imgs/
-│   ├── html5.png
-│   └── css3.png
-├── index.html
-├── styles.css
-└── README.md
+* **Phone (Móviles):** Rejilla vertical de **3 columnas**. El bloque negro superior (`Colors`) y el bloque de abajo (`green`) se expanden para ocupar las 3 columnas completas.
+* **Tablet:** Cuadrícula simétrica de **4 columnas**. El bloque superior `Colors` abarca las 4 columnas de ancho.
+* **Desktop (Escritorio):** Rejilla principal de **6 columnas**. El bloque final `green` se posiciona de forma asimétrica expandiéndose a lo largo de las últimas 3 columnas de la cuadrícula.
+
+---
+
+# ♿ Accesibilidad
+
+El proyecto aplica conceptos esenciales de accesibilidad web:
+* HTML semántico y estructurado.
+* Uso correcto de jerarquías de encabezados (`<h1>` y `<h2>`).
+* Contraste visual adecuado entre los textos de las celdas y sus colores de fondo para garantizar una lectura óptima.
+
+---
+
+# 🛠️ Tecnologías
+
+* HTML5
+* CSS3 (Grid Layout & Media Queries)
+* Google Fonts (`Press Start 2P` e `Inter`)
+* Visual Studio Code
+* Git & GitHub
+
+---
+
+# 📋 Planificación de Commits
+
+Se ha mantenido un flujo de trabajo ordenado mediante commits atómicos y claros que reflejan la evolución real de la estructura y los estilos:
+
+* `feat:` add semantic HTML structure for color blocks and headers
+* `style:` define typography properties and complete color palette layout
+* `style:` implement typography, color palette, and responsive grid layout rules
+* `docs:` rename original instructions to README_ORIGEN and setup project documentation
+
+---
+
+# 👨‍💻 Autora
+
+Proyecto desarrollado por:
+* **Luisa María Cortés**
+
+Training Developer · F5 Bootcamp
