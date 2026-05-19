@@ -87,11 +87,12 @@ h1 {
 .box {
     background-color: white;
     padding: 30px;
-    width: 700px;
+    width: 100%;             /* Se adapta al ancho disponible */
+    max-width: 700px;        /* En escritorio no pasa de 700px */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     display: flex;
-    flex-direction: row;
+    flex-direction: row;     /* Por defecto están de lado (escritorio) */
     gap: 25px;
     align-items: flex-start;
 }
@@ -148,14 +149,14 @@ h1 {
 /* Responsive móvil */
 @media (max-width: 600px) {
     .box {
-        flex-direction: column;
+        flex-direction: column;   /* ¡Esto obliga al logo a ponerse arriba y al texto abajo! */
         width: 100%;
         max-width: 380px;
-        text-align: center;
+        text-align: center;       /* Centra los textos en móvil */
     }
 
     .box img {
-        margin: 0 auto;
+        margin: 0 auto;           /* Centra horizontalmente el logo de HTML/CSS */
         width: 140px;
     }
 }
