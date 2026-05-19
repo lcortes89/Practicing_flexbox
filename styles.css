@@ -60,6 +60,7 @@ h1 {
 
 /* Párrafo */
 .box p {
+    font-family: "Xanh Mono", monospace;
     color: #555;
     font-size: 1rem;
     line-height: 1.6;
